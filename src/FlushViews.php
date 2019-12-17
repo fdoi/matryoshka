@@ -15,7 +15,8 @@ class FlushViews
      */
     public function handle($request, $next)
     {
-        Cache::tags('views')->flush();
+        // Flush not supported.
+        //Cache::tags('views')->flush();
 
         return $next($request);
     }
