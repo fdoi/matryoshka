@@ -34,7 +34,6 @@ class RussianCaching
         $key = $this->normalizeCacheKey($key);
 
         return $this->cache
-            ->tags('views')
             ->rememberForever($key, function () use ($fragment) {
                 return $fragment;
             });
@@ -50,7 +49,6 @@ class RussianCaching
         $key = $this->normalizeCacheKey($key);
 
         return $this->cache
-            ->tags('views')
             ->has($key);
     }
 
